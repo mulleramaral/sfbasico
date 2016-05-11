@@ -1,0 +1,11 @@
+homepage:
+    pattern:  /
+    defaults: { _controller: CategoriaBundle:Default:index }
+    
+categoria_homepage:
+    pattern:  /categorias
+    defaults: { _controller: CategoriaBundle:Default:index }
+
+categoria_nomeproduto:
+    pattern: /categorias/{nomeCategoria}/{nomeProduto}
+    defaults: {_controller: CategoriaBundle:Default:categorias}
