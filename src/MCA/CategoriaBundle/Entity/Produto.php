@@ -7,13 +7,13 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Produto
  *
- * @ORM\Table()
- * @ORM\Entity(repositoryClass="MCA\CategoriaBundle\Entity\ProdutoRepository")
+ * @ORM\Table(name="produto")
+ * @ORM\Entity(repositoryClass="MCA\CategoriaBundle\Repository\ProdutoRepository")
  */
 class Produto
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -39,7 +39,7 @@ class Produto
     /**
      * Get id
      *
-     * @return integer 
+     * @return int
      */
     public function getId()
     {
@@ -50,19 +50,20 @@ class Produto
      * Set nome
      *
      * @param string $nome
+     *
      * @return Produto
      */
     public function setNome($nome)
     {
         $this->nome = $nome;
-    
+
         return $this;
     }
 
     /**
      * Get nome
      *
-     * @return string 
+     * @return string
      */
     public function getNome()
     {
@@ -73,22 +74,24 @@ class Produto
      * Set unidade
      *
      * @param string $unidade
+     *
      * @return Produto
      */
     public function setUnidade($unidade)
     {
         $this->unidade = $unidade;
-    
+
         return $this;
     }
 
     /**
      * Get unidade
      *
-     * @return string 
+     * @return string
      */
     public function getUnidade()
     {
         return $this->unidade;
     }
 }
+

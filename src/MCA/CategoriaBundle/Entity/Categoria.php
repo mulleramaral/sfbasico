@@ -7,13 +7,13 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Categoria
  *
- * @ORM\Table()
- * @ORM\Entity(repositoryClass="MCA\CategoriaBundle\Entity\CategoriaRepository")
+ * @ORM\Table(name="categoria")
+ * @ORM\Entity(repositoryClass="MCA\CategoriaBundle\Repository\CategoriaRepository")
  */
 class Categoria
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -32,7 +32,7 @@ class Categoria
     /**
      * Get id
      *
-     * @return integer 
+     * @return int
      */
     public function getId()
     {
@@ -43,22 +43,23 @@ class Categoria
      * Set nome
      *
      * @param string $nome
+     *
      * @return Categoria
      */
     public function setNome($nome)
     {
         $this->nome = $nome;
-    
         return $this;
     }
 
     /**
      * Get nome
      *
-     * @return string 
+     * @return string
      */
     public function getNome()
     {
         return $this->nome;
     }
 }
+

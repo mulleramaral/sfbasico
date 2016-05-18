@@ -4,10 +4,9 @@ namespace MCA\CategoriaBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
-{
-    public function indexAction()
-    {
+class DefaultController extends Controller {
+
+    public function indexAction() {
         $categorias = array(
             'Informática',
             'Roupas',
@@ -23,4 +22,5 @@ class DefaultController extends Controller
             'nomeProduto' => $nomeProduto
         ));
     }
+
 }

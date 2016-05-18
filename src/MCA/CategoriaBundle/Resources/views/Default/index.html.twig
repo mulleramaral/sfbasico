@@ -1,6 +1,8 @@
 {% extends "::base.html.twig" %}
 
+{% block title 'Categorias' %}
 {% block body %}
+    <h1>Categorias</h1>
     {% for categoria in categorias %}
         {{ categoria }} </br>
     {% endfor %}

@@ -1,11 +1,19 @@
-homepage:
-    pattern:  /
+index:
+    path:  /
     defaults: { _controller: CategoriaBundle:Default:index }
     
-categoria_homepage:
-    pattern:  /categorias
+categorias:
+    path:  /categorias
     defaults: { _controller: CategoriaBundle:Default:index }
 
 categoria_nomeproduto:
-    pattern: /categorias/{nomeCategoria}/{nomeProduto}
+    path: /categorias/{nomeCategoria}/{nomeProduto}
     defaults: {_controller: CategoriaBundle:Default:categorias}
+    
+categoria_categoria:
+    resource: "@CategoriaBundle/Resources/config/routing/categoria.yml"
+    prefix:   /categoria
+    
+categoria_produto:
+    resource: "@CategoriaBundle/Resources/config/routing/produto.yml"
+    prefix:   /produto
